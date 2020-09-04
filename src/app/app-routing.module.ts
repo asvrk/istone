@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'contact',
+    loadChildren: () => import('./pages/contact/contact.module').then( m => m.ContactPageModule)
+  },
+  {
+    path: 'header',
+    loadChildren: () => import('./common/header/header.module').then( m => m.HeaderPageModule)
+  },
 ];
 
 @NgModule({

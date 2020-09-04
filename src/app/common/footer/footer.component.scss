@@ -1,0 +1,64 @@
+.footerContainer {
+  width: 100%;
+  background: #525252;
+  padding: 0 30px 40px;
+  color: var(--white);
+  display: table;
+  * {
+    color: var(--white);
+  }
+  h6 {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+  .footerContent {
+    display: table;
+    float: left;
+    clear: both;
+    width: 100%;
+
+    & > div {
+      margin-top: 20px;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+  .socialContent {
+    display: table;
+    float: left;
+    clear: both;
+    width: 100%;
+    & > div{
+        margin-bottom: 15px;
+    }
+  }
+
+  h5 {
+    margin-top: 40px;
+    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    border-bottom: 1px solid var(--white);
+    padding-bottom: 10px;
+    display: table;
+    float: left;
+    clear: both;
+  }
+}
+.copyRight {
+  background: var(--ash);
+  width: 100%;
+  padding: 15px 30px;
+  color: var(--grey);
+  display: table;
+  float: left;
+  & > * {
+    margin-bottom: 4px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

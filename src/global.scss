@@ -24,3 +24,22 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+:root{
+    --white: #FFFFFF;
+    --ash: #C2C2C2;
+    --grey: #525252;
+    --blue: #1FA7D0;
+}
+
+*, h1, h2, h3, h4, h5, h6, p, ul, li, span, i{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+html, body{
+    font: normal 400 12px/18px 'Lato', sans-serif;
+    color: var(--grey)
+}
