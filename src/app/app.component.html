@@ -1,5 +1,5 @@
 <ion-app>
-  <ion-menu side="end" menuId="first" contentId="main">
+  <ion-menu-toggle side="end" menuId="first" contentId="main">
     <ion-content>
       <span class="menuCloseIcon" (click)="closeMenu()">
         <img src="../assets/menu-close.svg" alt="Close Menu" />
@@ -20,7 +20,7 @@
           </li>
           <li routerLinkActive="active" [routerLink]="['/services']">
             <span class="navIcon">
-              <img src="../assets/menu-about.svg" alt="Services" />
+              <img src="../assets/menu-services.svg" alt="Services" />
             </span>
             <span class="navTxt">Services</span>
           </li>
@@ -56,6 +56,6 @@
         </div>
       </div>
     </ion-content>
-  </ion-menu>
+  </ion-menu-toggle>
   <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>
