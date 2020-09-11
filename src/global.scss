@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -25,21 +25,146 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
-
-:root{
-    --white: #FFFFFF;
-    --ash: #C2C2C2;
-    --grey: #525252;
-    --blue: #1FA7D0;
+:root {
+  --white: #ffffff;
+  --ash: #c2c2c2;
+  --grey: #525252;
+  --blue: #1fa7d0;
 }
 
-*, h1, h2, h3, h4, h5, h6, p, ul, li, span, i{
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+span,
+i {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;  
+  box-sizing: border-box;
+  color: #525252;
+  font-size: 10px;
+  line-height: 1.8rem;
 }
 
-html, body{
-    font: normal 400 12px/18px 'Lato', sans-serif;
-    color: var(--grey)
+html,
+body {
+  font: normal 400 12px/18px "Lato", sans-serif;
+  color: var(--grey);
 }
+
+@mixin reset-mp {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin margin($val1, $val2, $val3, $val4) {
+  margin: $val1 $val2 $val3 $val4;
+}
+@mixin padding($val1, $val2, $val3, $val4) {
+  padding: $val1 $val2 $val3 $val4;
+}
+
+.container {
+  padding: 25px;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+strong {
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+}
+
+.clear {
+  clear: both;
+  width: 100%;
+  float: left;
+}
+
+a {
+  font-size: 12px;
+  color: #1fa7d0;
+  text-decoration: none;
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  clear: both;
+}
+
+
+/*********************************/
+//      About Style starts
+/*********************************/
+
+.abtIntro {
+  @include padding(0, 0, 30px, 0);
+  .para {
+    @include padding(30px, 0, 10px, 0);
+  }
+}
+
+.warrantyTxt, .careTxt {
+  @include padding(30px, 0, 30px, 0);
+  .para {
+    @include padding(30px, 0, 10px, 0);
+  }
+}
+
+.deliveryTxt {
+  @include padding(30px, 0, 30px, 0);
+  .para {
+    @include padding(10px, 0, 10px, 0);
+    &:first-child {
+      @include padding(30px, 0, 10px, 0);
+    }
+  }
+}
+
+.stoneHeading{
+  @include margin(0, auto, 30px, auto);
+  @include padding(0, 35px, 0, 35px);
+  display: table;
+  font-weight: 500;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 21px;
+    height: 18px;
+    background: url(assets/stone-heading-left.svg) no-repeat center center;
+  }
+   &::after{
+    content: '';
+    position: absolute;
+    top: -3px;
+    right: 0;
+    width: 21px;
+    height: 18px;
+    background: url(assets/stone-heading-right.svg) no-repeat center center;
+  }
+}
+
+/*********************************/
+//       About Style ends
+/*********************************/
+

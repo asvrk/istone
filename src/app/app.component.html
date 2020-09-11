@@ -1,3 +1,61 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu side="end" menuId="first" contentId="main">
+    <ion-content>
+      <span class="menuCloseIcon" (click)="closeMenu()">
+        <img src="../assets/menu-close.svg" alt="Close Menu" />
+      </span>
+      <ion-list>
+        <ul class="sideNavItems">
+          <li routerLinkActive="active" [routerLink]="['/home']">
+            <span class="navIcon">
+              <img src="../assets/menu-home.svg" alt="Home" />
+            </span>
+            <span class="navTxt">Home</span>
+          </li>
+          <li routerLinkActive="active" [routerLink]="['/products']">
+            <span class="navIcon">
+              <img src="../assets/menu-product.svg" alt="Products" />
+            </span>
+            <span class="navTxt">Products</span>
+          </li>
+          <li routerLinkActive="active" [routerLink]="['/services']">
+            <span class="navIcon">
+              <img src="../assets/menu-about.svg" alt="Services" />
+            </span>
+            <span class="navTxt">Services</span>
+          </li>
+          <li routerLinkActive="active" [routerLink]="['/about']">
+            <span class="navIcon">
+              <img src="../assets/menu-about.svg" alt="About us" />
+            </span>
+            <span class="navTxt">About us</span>
+          </li>
+          <li routerLinkActive="active" [routerLink]="['/contact']">
+            <span class="navIcon">
+              <img src="../assets/menu-contact.svg" alt="Contact us" />
+            </span>
+            <span class="navTxt">Contact us</span>
+          </li>
+        </ul>
+      </ion-list>
+      <div class="navBottom">
+        <a class="phone" href="tel:02033725489" target="_blank">
+          <img src="../assets/menu-phone.svg" alt="">
+          0203 372 5489 </a>
+        <a class="mail" href="mailto:info@rtstone.co.uk" target="_blank">
+          <img src="../assets/menu-email.svg" alt="">
+          info@rtstone.co.uk
+        </a>
+        <div class="storeIcons">
+          <a class="playStore">
+            <img src="../assets/menu-playstore.png" alt="">
+          </a>
+          <a class="appStore">
+            <img src="../assets/menu-appstore.png" alt="">
+          </a>
+        </div>
+      </div>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

@@ -1,3 +1,86 @@
-.container{
-    padding: 0 20px;
+ion-menu {
+  --width: 240px;
+}
+.menuCloseIcon {
+  margin: 25px 25px 12px 0;
+  float: right;
+  img {
+    float: left;
+  }
+}
+ion-list {
+  width: 100%;
+}
+.sideNavItems {
+  padding: 20px 25px;
+  li {
+    padding: 12px 0;
+    display: table;
+    width: 100%;
+    background: #fff;
+    cursor: pointer;
+    border-bottom: 1px solid #c2c2c2;
+    float: left;
+    display: flex;
+    align-items: center;
+    // &:hover,
+    // &.active {
+    //     background: #F9EFE2;
+    //     color: #DB994D;
+    // }
+    img,
+    span {
+      float: left;
+    }
+  }
+
+  .navIcon {
+    display: table;
+    float: left;
+    margin-right: 12px;
+    color: #525252;
+  }
+
+  .navTxt {
+    padding-top: 3px;
+    display: table;
+    float: left;
+    font-size: 18px;
+  }
+}
+
+.navBottom {
+  position: absolute;
+  bottom: 50px;
+  padding: 0 25px;
+  width: 100%;
+  img{
+    margin-right: 8px;
+  }
+  .phone,
+  .mail {
+    margin-bottom: 15px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #707070;
+    border-radius: 6px;
+    color: #525252;
+    width: 100%;
+    justify-content: center;
+    font-size: 1.3rem;
+  }
+  .phone {
+    background: #525252;
+    color: #FFF;
+  }
+  .storeIcons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    float: left;
+    span:last-child{
+      margin-left: 15px;
+    }
+  }
 }

@@ -1,0 +1,20 @@
+ion-header {
+  ion-toolbar {
+    --background: #525252;
+    padding: 0 25px;
+    --box-shadow: none;
+    --opacity: 1;
+  }
+}
+.istoneLogo {
+  img {
+    width: 80px;
+    margin-top: 3px;
+  }
+}
+span{   
+    float: right;
+    img{
+        margin-top: 10px;
+    }
+}
