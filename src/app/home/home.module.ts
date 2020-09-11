@@ -7,6 +7,7 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { HeaderComponent } from 'src/app/common/header/header.component';
 import { FooterComponent } from 'src/app/common/footer/footer.component';
+import { GreyContactComponent } from '../common/grey-contact/grey-contact.component';
 
 
 @NgModule({
@@ -16,6 +17,6 @@ import { FooterComponent } from 'src/app/common/footer/footer.component';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, HeaderComponent, FooterComponent]
+  declarations: [HomePage, HeaderComponent, GreyContactComponent, FooterComponent]
 })
 export class HomePageModule {}
