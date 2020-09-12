@@ -1,7 +1,17 @@
 <app-header></app-header>
 <ion-content [fullscreen]="true">
   <div class="banner">
-    <img src="../../assets/home-slider-1.png" alt="" />
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide>
+        <img src="../../assets/home-slider-1.png" alt="" />
+      </ion-slide>
+      <ion-slide>
+        <img src="../../assets/home-slider-1.png" alt="" />
+      </ion-slide>
+      <ion-slide>
+        <img src="../../assets/home-slider-1.png" alt="" />
+      </ion-slide>
+    </ion-slides>
   </div>
 
   <div class="threeBlocks">
@@ -45,14 +55,39 @@
   <div class="container">
     <div class="testimonials">
       <h5 class="stoneHeading">Our Customer's Feedback</h5>
-      <span> <img src="../../assets/feedback.png" alt="" /></span>
-      <strong>Nick Cowan I Managing Director I Stone of London</strong>
-      <p>
-        We have been working with yghh Stone since 2016 and have found them to
-        be a good supplier of quartz slabs with a fantastic product. They offer
-        an excellent and personal service and we look forward to a long
-        relationship with them.
-      </p>
+
+      <ion-slides pager="true" class="testSlider" [options]="testimonialSlideOpts">
+        <ion-slide>
+          <span> <img src="../../assets/feedback.png" alt="" /></span>
+          <strong>Nick Cowan I Managing Director I Stone of London</strong>
+          <p>
+            We have been working with yghh Stone since 2016 and have found them
+            to be a good supplier of quartz slabs with a fantastic product. They
+            offer an excellent and personal service and we look forward to a
+            long relationship with them.
+          </p>
+        </ion-slide>
+        <ion-slide>
+          <span> <img src="../../assets/feedback.png" alt="" /></span>
+          <strong>Nick Cowan I Managing Director I Stone of London</strong>
+          <p>
+            We have been working with yghh Stone since 2016 and have found them
+            to be a good supplier of quartz slabs with a fantastic product. They
+            offer an excellent and personal service and we look forward to a
+            long relationship with them.
+          </p>
+        </ion-slide>
+        <ion-slide>
+          <span> <img src="../../assets/feedback.png" alt="" /></span>
+          <strong>Nick Cowan I Managing Director I Stone of London</strong>
+          <p>
+            We have been working with yghh Stone since 2016 and have found them
+            to be a good supplier of quartz slabs with a fantastic product. They
+            offer an excellent and personal service and we look forward to a
+            long relationship with them.
+          </p>
+        </ion-slide>
+      </ion-slides>
     </div>
     <div class="homeAbout">
       <h5 class="stoneHeading">About Us</h5>

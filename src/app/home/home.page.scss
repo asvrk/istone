@@ -1,0 +1,10 @@
+ion-slides {
+    --bullet-background: #FFFFFF;
+    --bullet-background-active: #C2C2C2;
+    width: 100%;
+}
+
+.testSlider ion-slide{
+    flex-direction: column;
+    padding: 0 0 70px;
+}

@@ -7,7 +7,15 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+  slideOpts = {
+    initialSlide: 0,
+    speed: 400,
+    autoplay:true
+  };
+  testimonialSlideOpts = {    
+    initialSlide: 0,
+    speed: 400,
+  }
   constructor(private menu: MenuController) {    
     this.menu.close();
   }
