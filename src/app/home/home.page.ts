@@ -15,6 +15,7 @@ export class HomePage {
   testimonialSlideOpts = {    
     initialSlide: 0,
     speed: 400,
+    autoplay:true
   }
   constructor(private menu: MenuController) {    
     this.menu.close();

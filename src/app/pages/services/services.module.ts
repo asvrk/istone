@@ -1,22 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { HomePage } from './home.page';
 
-import { HomePageRoutingModule } from './home-routing.module';
+import { IonicModule } from '@ionic/angular';
+
+import { ServicesPageRoutingModule } from './services-routing.module';
 import { HeaderComponent } from 'src/app/common/header/header.component';
 import { FooterComponent } from 'src/app/common/footer/footer.component';
 import { GreyContactComponent } from 'src/app/common/grey-contact/grey-contact.component';
 
+import { ServicesPage } from './services.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    ServicesPageRoutingModule
   ],
-  declarations: [HomePage, HeaderComponent, GreyContactComponent, FooterComponent]
+  declarations: [ServicesPage, HeaderComponent, GreyContactComponent, FooterComponent]
 })
-export class HomePageModule {}
+export class ServicesPageModule {}

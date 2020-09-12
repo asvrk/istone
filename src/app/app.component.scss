@@ -14,7 +14,7 @@ ion-list {
 .sideNavItems {
   padding: 20px 25px;
   li {
-    padding: 12px 0;
+    padding: 12px 5px;
     display: table;
     width: 100%;
     background: #fff;
@@ -26,11 +26,11 @@ ion-list {
     align-items: center;
     outline: none;
 
-    // &:hover,
-    // &.active {
-    //     background: #F9EFE2;
-    //     color: #DB994D;
-    // }
+    &:hover,
+    &.active {
+        background: #f0f0f0;
+    }
+    
     img,
     span {
       float: left;
