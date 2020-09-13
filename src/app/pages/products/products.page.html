@@ -1,111 +1,152 @@
-<app-header></app-header>
+<app-header *ngIf="isProdList"></app-header>
 <ion-content [fullscreen]="true">
-  <div class="prodFilter">
-    <span class="prodNum">134 Products</span>
-    <span class="filterDropdown">
-      <ion-select
-        multiple="true"
-        value="quartz"
-        okText="Okay"
-        cancelText="Dismiss"
-        [interfaceOptions]="typeOptions"
+  <div *ngIf="isProdList" class="products">
+    <div class="prodFilter">
+      <span class="prodNum">134 Products</span>
+      <span class="filterDropdown">
+        <ion-select
+          multiple="true"
+          value="quartz"
+          okText="Okay"
+          cancelText="Dismiss"
+          [interfaceOptions]="typeOptions"
+        >
+          <ion-select-option value="quartz">Quartz</ion-select-option>
+          <ion-select-option value="granite">Granite</ion-select-option>
+          <ion-select-option value="marble">Marble</ion-select-option>
+          <ion-select-option value="tile">Tile</ion-select-option>
+        </ion-select>
+        <ion-select
+          multiple="true"
+          value="brown"
+          okText="Okay"
+          cancelText="Dismiss"
+          [interfaceOptions]="colorOptions"
+        >
+          <ion-select-option value="brown">Brown</ion-select-option>
+          <ion-select-option value="blonde">Blonde</ion-select-option>
+          <ion-select-option value="black">Black</ion-select-option>
+          <ion-select-option value="red">Red</ion-select-option>
+        </ion-select></span
       >
-        <ion-select-option value="quartz">Quartz</ion-select-option>
-        <ion-select-option value="granite">Granite</ion-select-option>
-        <ion-select-option value="marble">Marble</ion-select-option>
-        <ion-select-option value="tile">Tile</ion-select-option>
-      </ion-select>
-      <ion-select
-        multiple="true"
-        value="brown"
-        okText="Okay"
-        cancelText="Dismiss"
-        [interfaceOptions]="colorOptions"
-      >
-        <ion-select-option value="brown">Brown</ion-select-option>
-        <ion-select-option value="blonde">Blonde</ion-select-option>
-        <ion-select-option value="black">Black</ion-select-option>
-        <ion-select-option value="red">Red</ion-select-option>
-      </ion-select></span
-    >
+    </div>
+    <div class="prodContainer">
+      <div class="prodItem">
+        <div class="prodImg">
+          <img src="../../../assets/home-new-1.jpg" alt="" />
+        </div>
+        <div class="prodDet">
+          <span class="topDet">
+            <p>Stellar Brown</p>
+          </span>
+          <span class="midDet">
+            <p>Size: 4' x 4'</p>
+            <p>Quantity: 24 pcs</p>
+          </span>
+          <span (click)="showProdDet()" class="botDet">View details</span>
+        </div>
+      </div>
+      <div class="prodItem">
+        <div class="prodImg">
+          <img src="../../../assets/home-new-2.jpg" alt="" />
+        </div>
+        <div class="prodDet">
+          <span class="topDet">
+            <p>Stellar Brown</p>
+          </span>
+          <span class="midDet">
+            <p>Size: 4' x 4'</p>
+            <p>Quantity: 24 pcs</p>
+          </span>
+          <span (click)="showProdDet()" class="botDet">View details</span>
+        </div>
+      </div>
+      <div class="prodItem">
+        <div class="prodImg">
+          <img src="../../../assets/home-new-3.jpg" alt="" />
+        </div>
+        <div class="prodDet">
+          <span class="topDet">
+            <p>Stellar Brown</p>
+          </span>
+          <span class="midDet">
+            <p>Size: 4' x 4'</p>
+            <p>Quantity: 24 pcs</p>
+          </span>
+          <span (click)="showProdDet()" class="botDet">View details</span>
+        </div>
+      </div>
+      <div class="prodItem">
+        <div class="prodImg">
+          <img src="../../../assets/home-new-4.jpg" alt="" />
+        </div>
+        <div class="prodDet">
+          <span class="topDet">
+            <p>Stellar Brown</p>
+          </span>
+          <span class="midDet">
+            <p>Size: 4' x 4'</p>
+            <p>Quantity: 24 pcs</p>
+          </span>
+          <span (click)="showProdDet()" class="botDet">View details</span>
+        </div>
+      </div>
+      <div class="prodItem">
+        <div class="prodImg">
+          <img src="../../../assets/home-new-1.jpg" alt="" />
+        </div>
+        <div class="prodDet">
+          <span class="topDet">
+            <p>Stellar Brown</p>
+          </span>
+          <span class="midDet">
+            <p>Size: 4' x 4'</p>
+            <p>Quantity: 24 pcs</p>
+          </span>
+          <span (click)="showProdDet()" class="botDet">View details</span>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="prodContainer">
-    <div class="prodItem">
-      <div class="prodImg">
+
+  <div *ngIf="isProdDet" class="productDetailsContainer">
+    <span class="closePop"><img (click)="showProdList()" src="../../../assets/menu-close.svg" alt=""></span>
+    <div class="productGall">
+      <div class="activeImg">
         <img src="../../../assets/home-new-1.jpg" alt="" />
       </div>
-      <div class="prodDet">
-        <span class="topDet">
-          <p>Stellar Brown</p>
-        </span>
-        <span class="midDet">
-          <p>Size: 4' x 4'</p>
-          <p>Quantity: 24 pcs</p>
-        </span>
-        <span class="botDet">View details</span>
+      <div class="gallOptions">
+        <div class="allImages">
+          <span style="background-image: url(../../../assets/home-new-1.jpg);"></span>
+          <span style="background-image: url(../../../assets/home-new-2.jpg);"></span>
+          <span style="background-image: url(../../../assets/home-new-3.jpg);"></span>   
+        </div>
+        <div class="shareIcon">
+          <span><img src="../../../assets/prod-share.svg" alt=""> Share</span>
+        </div>
       </div>
     </div>
-    <div class="prodItem">
-      <div class="prodImg">
-        <img src="../../../assets/home-new-2.jpg" alt="" />
-      </div>
-      <div class="prodDet">
-        <span class="topDet">
-          <p>Stellar Brown</p>
-        </span>
-        <span class="midDet">
-          <p>Size: 4' x 4'</p>
-          <p>Quantity: 24 pcs</p>
-        </span>
-        <span class="botDet">View details</span>
-      </div>
+    <div class="productDetails">
+      <p><strong>Stellar Brown</strong></p>
+
+      <p class="mt-20"><strong>Size:</strong> 4' x 4'</p>
+      <p><strong>Quantity:</strong> 24 pcs</p>
+
+      <p class="mt-20"><strong>Tags:</strong> Colour Brown, Tiles, Designs</p>
+      
+      <p class="mt-20"><strong>Description:</strong> Jggkxcjhaslkncbanc, kjnbknlajclm klnlknalksnc lnlknlkmnkacnl lnlkjnlnkc lnlknlnac lknklnlknca lnklnlknlc nnlnlncla lnlknlnlnc lnlknlnlnlca lnlnlnlmnlnmca lnlknlnlnc lnlknlnca lnlnlnlca lnlnlnlca. khbjcalkmlcmlma.mlcmlmlmlmlc</p>
     </div>
-    <div class="prodItem">
-      <div class="prodImg">
-        <img src="../../../assets/home-new-3.jpg" alt="" />
-      </div>
-      <div class="prodDet">
-        <span class="topDet">
-          <p>Stellar Brown</p>
-        </span>
-        <span class="midDet">
-          <p>Size: 4' x 4'</p>
-          <p>Quantity: 24 pcs</p>
-        </span>
-        <span class="botDet">View details</span>
-      </div>
-    </div>
-    <div class="prodItem">
-      <div class="prodImg">
-        <img src="../../../assets/home-new-4.jpg" alt="" />
-      </div>
-      <div class="prodDet">
-        <span class="topDet">
-          <p>Stellar Brown</p>
-        </span>
-        <span class="midDet">
-          <p>Size: 4' x 4'</p>
-          <p>Quantity: 24 pcs</p>
-        </span>
-        <span class="botDet">View details</span>
-      </div>
-    </div>
-    <div class="prodItem">
-      <div class="prodImg">
-        <img src="../../../assets/home-new-1.jpg" alt="" />
-      </div>
-      <div class="prodDet">
-        <span class="topDet">
-          <p>Stellar Brown</p>
-        </span>
-        <span class="midDet">
-          <p>Size: 4' x 4'</p>
-          <p>Quantity: 24 pcs</p>
-        </span>
-        <span class="botDet">View details</span>
-      </div>
+    
+    <div class="contactInfo">
+      <a class="phone" href="tel:02033725489" target="_blank">
+        <img src="../assets/menu-phone.svg" alt="">
+        0203 372 5489 </a>
+      <a class="mail" href="mailto:info@rtstone.co.uk" target="_blank">
+        <img src="../assets/menu-email.svg" alt="">
+        info@rtstone.co.uk
+      </a>
     </div>
   </div>
-  <app-grey-contact></app-grey-contact>
-  <app-footer></app-footer>
+  <app-grey-contact *ngIf="isProdList"></app-grey-contact>
+  <app-footer *ngIf="isProdList"></app-footer>
 </ion-content>
